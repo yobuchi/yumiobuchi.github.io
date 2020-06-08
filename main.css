@@ -7,17 +7,35 @@
 html{
     font-size: 10px;
     font-family:  'Open Sans', sans-serif;
-    color:#1A5276;
+    /* color:#1A5276; */
     /* color: #eee; */
 }
 
-body{
+#index{
     width: 100%;
-    height: 100%;
-    background: rgb(250, 227, 222);
-    /* background: url("images/sitebg.jpg") no-repeat center fixed; */
+    height: 100%;    
     background-size: cover;
+    background: #b7d2e0;
 }
+
+#experience{
+    width: 100%;
+    height: 100%;    
+    background-size: cover;
+    background: #f8e9a1;
+}
+
+#projects{
+    background:#fb9190;
+}
+/* body{
+    width: 100%;
+    height: 100%; */
+    /* background: #cce7e8; */
+    /* background: rgb(250, 227, 222); */
+    /* background: url("images/sitebg.jpg") no-repeat center fixed; */
+    /* background-size: cover;
+} */
 
 section{
     padding: 6rem 0;
@@ -43,7 +61,7 @@ img{
     max-width: 120rem;
     height: 100%;
     margin: 0 auto;
-    postition: relative;
+    position: relative;
 }
 
 .section-heading{
@@ -53,7 +71,7 @@ img{
  
 .section-heading h1{
     font-size: 3.5rem;
-    color: rgba(255,255,255, .3);
+    /* color: black; */
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -65,8 +83,7 @@ img{
     position: absolute;
     bottom: -.5rem;
     left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255,255,255, .75);
+
 }
 .section-heading h1::before{
     width: 10rem;
@@ -86,84 +103,70 @@ img{
     margin-right: 5rem;
 }
 
+#chat{
+    text-align: center;
+}
+
 /*End reusable*/
 
-/*Start header*/
-header{
-    width: 100%;
-    height: 100vh;
+/* Start header*/
+
+.nav-wrapper{
+	/* display: flex;					/*puts stuff in 1 line */
+	/* justify-content: space-between; use space to justify */
+	/* padding-top: 38px; */
+	padding-bottom: 38px;
+	margin-right: 20px;
+
+	font-size: 2em;						/*this is font size*/
+			/*you dont have to do this in code*/
+	position: fixed;
 }
 
-.top-nav{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: -100vh;
-    z-index: 1; /*so text doesnt sit on top of navigation*/
-    background-color: #16162d;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-    transition: all 650ms cubic-bezier(1,0,0,1);
+#side-bar{
+	display: block;
 }
 
-.nav-list{
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-li{
-    margin: 0 2rem;
+.nav-link-wrapper{
+	height: 40px;
 }
 
-.nav-link{
-    font-family:'Open Sans', sans-serif;
-    font-size: 4rem;
-    padding: 1rem;
+.nav-wrapper a{								/*we dont need to go through all selection steps above,
+											 because it's just 1 single select (not many nested levels) */
+	color: #8a8a8a;
+	text-decoration: None;					/*removes the default underlining for links*/	
+	transition: color 0.5s;					/*animation that chages color*/								 
 }
 
-.nav-link:hover{
-    background: linear-gradient(to top, yellow,pink);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.nav-link-wrapper a:hover{					/*this is for the link/the words itself*/
+    color: black;
 }
 
-.top-nav.open{  
-    top: 0;
-    border-radius: initial; /*no border*/
+
+.active-nav-link a{
+	color: black !important;	/*important property means: ignore all subsequent rules on element. we want to override default color behaviour*/
 }
 
-.menu-toggler{
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1500;
-    transition: transform 650ms ease-out;
-}
-
-.menu-toggler.open{
-    transform: rotate(-45deg);
-}
 
 .landing-text{
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);    /*puts it in the middle*/
     width: 100%;
     text-align: center;
     z-index: 1;
-}
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  
+    width: 100%;
+    text-align: center;
+    z-index: 1; */
+} 
 
 .landing-text h1{
-    font-size: 10rem;
+    font-size: 5rem;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -179,6 +182,7 @@ li{
 .landing-text h6{
     font-size: 2rem;
     font-weight: 400;
+    padding: 5rem;
 }
 
 
@@ -209,20 +213,24 @@ li{
 }
 
 .profile-img{
-   flex: 1;
-   margin-right: 5rem;
+    display: inline-block;
+    border-radius: 50%;
+    width: 170px !important;
+    border: 10px solid white;
 }
-
 .about-details{
     flex: 1;
 }
 
-.social-media{
-    margin-top: 5rem;
+.nav-wrapper{
+    display: inline-block;
+    /* margin-top: 5rem; */
+    /* white-space: nowrap ; */
 }
 
-.social-media i{
-    font-size: 5rem;
+.nav-wrapper li{
+    display: inline; 
+    font-size: 4rem;
     transition: color 650ms;
 }
 
@@ -249,12 +257,13 @@ li{
 }
 
 .profile-img{
-    width: 50rem;
     flex: 1;
 }
 
-.portfolio-description{
+.portfolio-description {
+    flex: 1;
 }
+
 
 .portfolio-description h1{
     font-size: 3rem;
@@ -285,7 +294,7 @@ li{
 
 /*Start timeline*/
 .timeline ul{
-    border-left: 4px solid yellow;
+    border-left: 4px solid;
     border-radius: .8rem;
     background-color: rgba(0,0,0,0.05);
     margin: 0 auto;
@@ -326,57 +335,64 @@ li{
 
 .timeline .date::before{
     content: attr(data-date);
-    left: -21rem;
+    left: -22rem;
     text-align: right;
     min-width: 12rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    color: #4b5668;
 }
 
 .timeline .date:after{
     content: '';
     box-shadow: 0 0 0 4px pink;
     border-radius: 100%;    /*make into circle*/
-    left: -8rem;
+    left: -6rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background: #fb9190;
+
+    /* background-color: #313534; */
 }
+
+
+
 /*End timeline*/
 
 /*Start contact*/
 .contact{
-    background-color: #221e3f;
-}
-form{
-    width: 70%;
-    margin: 0 auto;
-}
-form label{
-    font-size: 1.5rem;
+    color:white;
+    background-color:#2e536d ;
+    width: 100%;
+    /* padding: 1rem; */
+    /* margin-bottom: 5px; */
+    border: none;
+    outline-color: #fd57bf;
 }
 
-input,select,textarea{
+button{
+    width: initial;
+    background-color:#e65c55;
+    color: #eee;
+    padding: 1.5rem 5rem;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: blue;
+}
+/* 
+input{
     width: 100%;
     padding: 1rem;
     margin-bottom: 5px;
     border: none;
     outline-color: #fd57bf;
-}
+} */
 
-input[type = "submit"]{
-    width: initial;
-    background-color: pink;
-    color: #eee;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: .8rem;
-    cursor: pointer;
-    transition: background-color 650ms;
-}
-input[type = "submit"]:hover{
-    color: #221e3f;
-    background-color: #ff3838;
-}
 
 /*End contact*/
 
@@ -410,6 +426,7 @@ input[type = "submit"]:hover{
 
 .copyright p{
     font-size: 1.4rem;
+    color: white;
 }
 
 /*End footer*/
@@ -430,11 +447,29 @@ input[type = "submit"]:hover{
 
 /*Start media queries*/
 @media screen and (max-width: 760px){
-    body{
+    /* body{ */
         /* width: 100%;
         height: 100%; */
-        background: url("images/sitebg2.jpg") no-repeat center fixed;
+        /* background: url("images/sitebg2.jpg") no-repeat center fixed; */
+        /* background-size: cover;
+    } */
+
+    #index{
+        width: 100%;
+        height: 100%;    
         background-size: cover;
+        background: #b7d2e0;
+    }
+    
+    #experience{
+        width: 100%;
+        height: 100%;    
+        background-size: cover;
+        background: #f8e9a1;
+    }
+    
+    #projects{
+        background:#fb9190;
     }
 
     .landing-text h1{
