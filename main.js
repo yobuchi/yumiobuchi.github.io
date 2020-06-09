@@ -2,7 +2,7 @@
 var aText = new Array(
   "  Hey! Welcome to my corner of the internet.", "",
   "I'm a software developer & product strategist from NYC.","",
-  " I currently solve financial & digital problems for F500 clients at PwC, and have worked for Marvel as 1 of the 3 core members of their Business Intelligence team","", "I'm also a writer with an emphasis on literary criticism.");
+  " I currently solve financial & digital problems for F500 clients at PwC, and have worked for Marvel as 1 of the 3 core members in their Business Intelligence unit","", "I'm also a writer with an emphasis on literary criticism.");
 
   var iSpeed = 10; // time delay of print out
   var iIndex = 0; // start printing array at this posision

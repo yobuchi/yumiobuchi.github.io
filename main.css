@@ -60,12 +60,6 @@ p{
 }
 
 
-#typedtext{
-    font-size: 1.9rem;
-    font-weight: 800; 
-}
-
-
 img{
     width: 100%;
 }
@@ -162,6 +156,12 @@ img{
 .active-nav-link a{
 	color: black !important;	/*important property means: ignore all subsequent rules on element. we want to override default color behaviour*/
 }
+
+#typedtext{
+    font-size: 1.9rem;
+    font-weight: 800; 
+}
+
 
 
 .landing-text{
