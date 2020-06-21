@@ -7,8 +7,6 @@
 html{
     font-size: 10px;
     font-family:  'Open Sans', sans-serif;
-    /* color:#1A5276; */
-    /* color: #eee; */
 }
 
 #index{
@@ -23,6 +21,7 @@ html{
     height: 100%;    
     background-size: cover;
     background: #f8e9a1;
+
 }
 
 #projects{
@@ -103,9 +102,7 @@ img{
 }
 .section-heading h2{
     font-size: 2rem;
-    /* font-weight: 300;
-    position: relative;
-    margin-bottom: 1rem; */
+
 }
 
 
@@ -129,45 +126,52 @@ img{
 /* Start header*/
 
 .nav-wrapper{
-	/* display: flex;					/*puts stuff in 1 line */
-	/* justify-content: space-between; use space to justify */
-	/* padding-top: 38px; */
-	padding-bottom: 38px;
-	margin-right: 20px;
-
-	font-size: 2em;	
-	position: fixed;
+	justify-content: space-between;
+    width: 200px;
+    height: 100%;
+    font-size: 2em;	
+    font-weight: 800 !important;
+    overflow: auto;
+    position: fixed;
+    display: inline-block;
+    margin-top: 6rem;
+    margin-left: 4rem;
 }
-
-/* #side-bar{
-	display: block;
-} */
 
 .nav-link-wrapper{
 	height: 40px;
 }
 
-.nav-wrapper a{								/*we dont need to go through all selection steps above,
-											 because it's just 1 single select (not many nested levels) */
+.nav-wrapper a{	
+    /* display: block; */
 	color: #8a8a8a;
-	text-decoration: None;					/*removes the default underlining for links*/	
-	transition: color 0.5s;					/*animation that chages color*/								 
+	text-decoration: None;					
+	transition: color 0.5s;										 
 }
 
 
-.nav-link-wrapper a:hover{					/*this is for the link/the words itself*/
+.nav-link-wrapper a:hover{			
 	color: black;
 }
 
 
 .active-nav-link a{
-	color: black !important;	/*important property means: ignore all subsequent rules on element. we want to override default color behaviour*/
+	color: black !important;
 }
-/* 
-#typedtext{
-    font-size: 1.9rem;
-    font-weight: 800; 
-} */
+
+.nav-wrapper li{
+    display: inline; 
+    font-size: 4rem;
+    transition: color 650ms;
+}
+
+.fa-linkedin-in:hover{
+    color: #0e76a8;
+}
+
+.fa-github:hover{
+    color: #6e5494;
+}
 
 /*End header*/
 
@@ -177,14 +181,7 @@ img{
     width: 100%;
     text-align: center;
     z-index: 1;
-
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);  
-    width: 100%;
-    text-align: center;
-    z-index: 1; */
+    margin-left: 0px;
 } 
 
 .landing-text h1{
@@ -194,13 +191,8 @@ img{
     font-style: normal;
     font-weight: 800;
     color: #4b5668;
-    /* color: white; */
-    /* color: rgba(0, 0, 0, 0.85); */
     letter-spacing: 0.075em;
-    /* background: linear-gradient(to top,yellow,pink); */
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    padding: 1rem; /*so text isnt clipped off*/
+    padding: 1rem;
 }
 
 .landing-text h6{
@@ -243,38 +235,29 @@ img{
 }
 .about-details{
     flex: 1;
-    width: 50%;
+    width: 80%;
     margin: auto;
     line-height: 1.6;
     color: #4b5668;
+    animation: 0.8s ease-out 0s 1 slideInFromLeft;
 
-}
-
-.nav-wrapper{
-    display: inline-block;
-    margin-top: 6rem;
-    margin-left: 4rem;
-    font-weight: 800 !important;
-    /* white-space: nowrap ; */
-}
-
-.nav-wrapper li{
-    display: inline; 
-    font-size: 4rem;
-    transition: color 650ms;
-}
-
-.fa-linkedin-in:hover{
-    color: #0e76a8;
-}
-
-.fa-github:hover{
-    color: #6e5494;
 }
 
 /*End about*/
 
+/*Start experience*/
+.experience{
+    margin-left: 100px;
+}
+/*End experience*/
+
 /*Start portfolio*/
+#coming-soon{
+    animation: 0.8s ease-out 0s 1 slideInFromLeft;
+}
+portfolio{
+    margin-left: 100px;
+}
 .portfolio-item{
     display: flex;
     align-items: center;
@@ -320,7 +303,7 @@ img{
 .portfolio-description .cta:hover{
     color: #2f67cd;
 }
-/*End services*/
+/*End portfolio*/
 
 /*Start timeline*/
 .timeline ul{
@@ -334,6 +317,8 @@ img{
     text-align: left;
     width: 70%;
     line-height: 1.6;
+    animation: 0.8s ease-out 0s 1 slideInFromLeft;
+
 }
 
 .timeline li{
@@ -351,15 +336,13 @@ img{
 
 
 .timeline .date{
-    /* margin-bottom: 1rem;
-    padding-bottom: 1rem; */
     position: relative;
 }
 
 .timeline .date:last-of-type{
-    /* padding-bottom: 0;
+    padding-bottom: 0;
     margin-bottom: 0;
-    border: none; */
+    border: none;
 }
 
 .timeline .date::before,.timeline .date::after{
@@ -386,8 +369,6 @@ img{
     height: 1.5rem;
     width: 1.5rem;
     background: #fb9190;
-
-    /* background-color: #313534; */
 }
 
 
@@ -398,9 +379,7 @@ img{
 .contact{
     color:white;
     background-color:#2e536d ;
-    width: 100%;
-    /* padding: 1rem; */
-    /* margin-bottom: 5px; */
+    margin-top: 40px;
     border: none;
     outline-color: #fd57bf;
 }
@@ -420,15 +399,6 @@ button{
 button:hover{
     background-color:#ce3635;
 }
-/* 
-input{
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 5px;
-    border: none;
-    outline-color: #fd57bf;
-} */
-
 
 /*End contact*/
 
@@ -479,16 +449,26 @@ input{
         box-shadow: 0 0 0 rgba(253,87,191, 0);
     }
 }
+
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 /*End animations*/
 
 /*Start media queries*/
 @media screen and (max-width: 760px){
-    /* body{ */
-        /* width: 100%;
-        height: 100%; */
-        /* background: url("images/sitebg2.jpg") no-repeat center fixed; */
-        /* background-size: cover;
-    } */
+    body{
+        width: 100%;
+        height: 100%; 
+        background: url("images/sitebg2.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
 
     #index{
         width: 100%;
@@ -502,19 +482,22 @@ input{
         height: 100%;    
         background-size: cover;
         background: #f8e9a1;
+        margin-left: 0px;
     }
     
     #projects{
         background:#fb9190;
     }
-
-    .landing-text h1{
-        font-size: 8rem;
+    .landing-text{
+        margin-left: 0;
     }
 
-    .landing-text h6{
-        font-size: 1.7rem;
+    .nav-wrapper{
+        width: 100%;
+        height: auto;
+        position: relative;
     }
+    
     .nav-list{
         flex-direction: column;
     }
@@ -554,25 +537,18 @@ input{
     }
 }
 
-@media screen and (max-width: 600px){
-    /* .meu-togger{
-        top: 2rem;
-        right: 2rem;
-    } */
+@media screen and (max-width: 400px){
+    
 
-    .landing-text h1{
-        font-size: 8rem;
-    }
-
-    .landing-text h6{
-        font-size: 1.4rem;
+    .nav-wrapper{
+        position: relative;
     }
 
     .nav-link{
         font-size: 3.5rem;
     }
 
-    .about .container{ /*stack on top of each other*/
+    .about .container{          /*stack on top of each other*/
         flex-direction: column;
     }
 
@@ -580,13 +556,14 @@ input{
         margin: 0 0 7rem 0; 
     }
 
+
     .portfolio-item{
         flex-direction: column;
     }
 
     .portfolio-img{
         margin: 0 0 2rem 0;
-        order: 1;               /*ensures that img is before description, see below*/
+        order: 1;               /*ensures that img is before description,*/
     }
 
     .portfolio-description{
@@ -602,13 +579,9 @@ input{
         font-size: 1.4rem;
     }
 
-    form{
-        width: 100%;
-    }
-
-    .up{
+    /* .up{
         right: 2rem;
-    }
+    } */
 }
 
 
